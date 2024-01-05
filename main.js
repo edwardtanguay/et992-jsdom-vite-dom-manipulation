@@ -1,9 +1,12 @@
+import { ButtonArea } from './components/ButtonArea';
 import './style.css';
 
 document.querySelector('#app').innerHTML = `
 	<p class="message">original message</p>
-	<button class="btn-color">Change color</button>
-	<button class="btn-text-color">Change text color</button>
+	<hr>
+	${ButtonArea()}
+	<hr>
+	${ButtonArea()}
 `;
 
 const messageElem = document.querySelector('.message');
