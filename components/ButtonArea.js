@@ -14,6 +14,7 @@ export const ButtonArea = () => {
 		messageElem.style.boxShadow = '5px 5px 1px #ff0000, 10px 10px 1px #0000ff';
 		messageElem.style.fontSize = "3rem";
 		messageElem.innerHTML = "Hello <b> World </b> ";
+		messageElem.style.margin = '0 0 1rem 0';
 
 		btnColorElem.addEventListener("click", () => {
 			btnColorElem.style.backgroundColor = "red";
@@ -25,9 +26,13 @@ export const ButtonArea = () => {
 		});
 	}, 0);
 
-	return `
-	<button class="btn-color">Change color</button>
-	<button class="btn-text-color">Change text color</button>
+	return /*html*/ `
+	<fieldset>
+		<legend>ButtonArea</legend>
+		<p class="message">original message</p>
+		<button class="btn-color">Change button color</button>
+		<button class="btn-text-color">Change text color</button>
+	</fieldset>
 	`;
 };
 

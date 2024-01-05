@@ -2,18 +2,25 @@ export const MainForm = () => {
 
 	setTimeout(() => {
 		const messageTitleElem = document.querySelector('.title');
+		const newTitleElem = document.querySelector('.newTitle');
 		const btnChangeTitleElem = document.querySelector('.btnChangeTitle');
+
 		messageTitleElem.style.color = 'green';
+		messageTitleElem.style.marginBottom = '1rem';
+		newTitleElem.value = 'new title text'
 
 		btnChangeTitleElem.addEventListener("click", () => {
-			messageTitleElem.style.backgroundColor = "red";
+			messageTitleElem.innerText = newTitleElem.value;
 		});
 	});
 
-	return `
+	return /*html*/ `
+	<fieldset>
+		<legend>MainForm</legend>
 		<form>
 			<p class="title">original title</p>
-			<input class="inputTitle" type="text"> <button type="button" class="btnChangeTitle">Change</button>	
+			<input class="newTitle" type="text"> <button type="button" class="btnChangeTitle">Change</button>	
 		</form>
+	</fieldset>
 	`;
-}
+};
