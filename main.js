@@ -3,14 +3,10 @@ import './style.css';
 
 document.querySelector('#app').innerHTML = `
 	<p class="message">original message</p>
-	<hr>
-	${ButtonArea()}
-	<hr>
 	${ButtonArea()}
 `;
 
 const messageElem = document.querySelector('.message');
-const btnColorElem = document.querySelector('.btn-color');
 const btnTextColorElem = document.querySelector('.btn-text-color');
 
 messageElem.style.color = 'red';
@@ -24,10 +20,6 @@ messageElem.style.fontSize = "3rem";
 messageElem.innerHTML = "Hello <b> World </b> ";
 
 // event
-btnColorElem.addEventListener("click", () => {
-	btnColorElem.style.backgroundColor = "red";
-	btnColorElem.style.color = "yellow";
-});
 btnTextColorElem.addEventListener("click", () => {
 	messageElem.style.color = "blue";
 });
